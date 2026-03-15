@@ -4,6 +4,28 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "CloudNote - Your Thoughts, Organized Everywhere",
   description: "Experience seamless cross-device syncing that keeps your notes updated instantly.",
+  openGraph: {
+    title: "CloudNote - Seamless Note Taking & Management",
+    description: "The ultimate cloud-based platform for organizing your thoughts, projects, and ideas.",
+    url: "https://cloudnote-memo-service.vercel.app",
+    siteName: "CloudNote",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "CloudNote - Your Intelligent Workspace",
+      },
+    ],
+    locale: "ko_KR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CloudNote",
+    description: "Organize your thoughts in one place with CloudNote.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({
