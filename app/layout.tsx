@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+const appUrl = process.env.NEXT_PUBLIC_APP_URL ? 
+  (process.env.NEXT_PUBLIC_APP_URL.startsWith('http') ? process.env.NEXT_PUBLIC_APP_URL : `https://${process.env.NEXT_PUBLIC_APP_URL}`) : 
+  'https://saas-deploy-psi.vercel.app';
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://saas-deploy-psi.vercel.app'),
+  metadataBase: new URL(appUrl),
   title: "CloudNote - Your Thoughts, Organized Everywhere",
   description: "Experience seamless cross-device syncing that keeps your notes updated instantly.",
   openGraph: {
