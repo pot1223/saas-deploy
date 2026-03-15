@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://saas-deploy-psi.vercel.app'),
   title: "CloudNote - Your Thoughts, Organized Everywhere",
   description: "Experience seamless cross-device syncing that keeps your notes updated instantly.",
   openGraph: {
