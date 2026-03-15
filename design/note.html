@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1337ec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101322",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>CloudNote - Editor</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex h-screen w-full overflow-hidden">
+<!-- Sidebar Navigation -->
+<aside class="w-64 flex flex-col border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 h-full">
+<div class="p-6 flex flex-col gap-8 h-full">
+<!-- User Profile/Logo -->
+<div class="flex items-center gap-3">
+<div class="bg-primary/10 rounded-lg p-2 text-primary">
+<span class="material-symbols-outlined text-2xl">cloud_done</span>
+</div>
+<div class="flex flex-col">
+<h1 class="text-slate-900 dark:text-slate-100 text-base font-bold leading-none">CloudNote</h1>
+<p class="text-slate-500 dark:text-slate-400 text-xs mt-1 font-medium">Premium Plan</p>
+</div>
+</div>
+<!-- Nav Links -->
+<nav class="flex flex-col gap-1 grow">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">description</span>
+<span class="text-sm font-semibold">All Notes</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">person</span>
+<span class="text-sm font-medium">Personal</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">work</span>
+<span class="text-sm font-medium">Work</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">group</span>
+<span class="text-sm font-medium">Shared</span>
+</a>
+<div class="mt-8 mb-2 px-3">
+<p class="text-[10px] uppercase tracking-wider font-bold text-slate-400 dark:text-slate-500">Folders</p>
+</div>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">folder</span>
+<span class="text-sm font-medium">Projects</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">folder</span>
+<span class="text-sm font-medium">Archive</span>
+</a>
+</nav>
+<!-- New Folder Button -->
+<button class="flex items-center justify-center gap-2 rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold transition-all hover:bg-primary/90 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">create_new_folder</span>
+<span class="truncate">New Folder</span>
+</button>
+</div>
+</aside>
+<!-- Main Editor Area -->
+<main class="flex-1 flex flex-col bg-white dark:bg-slate-950 overflow-y-auto">
+<!-- Header Toolbar -->
+<header class="sticky top-0 z-10 flex items-center justify-between border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md px-8 py-4">
+<div class="flex items-center gap-1">
+<button class="p-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" title="Bold">
+<span class="material-symbols-outlined text-[22px]">format_bold</span>
+</button>
+<button class="p-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" title="Italic">
+<span class="material-symbols-outlined text-[22px]">format_italic</span>
+</button>
+<div class="w-px h-6 bg-slate-200 dark:bg-slate-800 mx-2"></div>
+<button class="p-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" title="Bullet List">
+<span class="material-symbols-outlined text-[22px]">format_list_bulleted</span>
+</button>
+<button class="p-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" title="Numbered List">
+<span class="material-symbols-outlined text-[22px]">format_list_numbered</span>
+</button>
+<div class="w-px h-6 bg-slate-200 dark:bg-slate-800 mx-2"></div>
+<button class="p-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" title="Insert Image">
+<span class="material-symbols-outlined text-[22px]">image</span>
+</button>
+<button class="p-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" title="Insert Link">
+<span class="material-symbols-outlined text-[22px]">link</span>
+</button>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1 text-slate-400 dark:text-slate-500 mr-4 px-3 py-1 bg-slate-50 dark:bg-slate-900 rounded-full border border-slate-200 dark:border-slate-800">
+<span class="material-symbols-outlined text-[16px]">cloud_done</span>
+<span class="text-[11px] font-medium uppercase tracking-tighter">Synced</span>
+</div>
+<button class="flex items-center justify-center rounded-lg h-9 px-4 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100 text-sm font-semibold transition-colors hover:bg-slate-200 dark:hover:bg-slate-700">
+<span class="truncate">Share</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-9 px-6 bg-primary text-white text-sm font-bold transition-all hover:bg-primary/90 shadow-md">
+<span class="truncate">Save</span>
+</button>
+</div>
+</header>
+<!-- Editor Content -->
+<div class="flex-1 max-w-4xl mx-auto w-full px-8 pt-12 pb-24">
+<div class="flex flex-col gap-6">
+<!-- Title Input -->
+<input class="w-full bg-transparent border-none text-4xl font-extrabold text-slate-900 dark:text-slate-100 placeholder:text-slate-300 dark:placeholder:text-slate-800 focus:ring-0 focus:outline-none p-0" placeholder="Note Title" type="text" value="Q4 Project Strategy"/>
+<!-- Metadata Info -->
+<div class="flex items-center gap-4 text-slate-400 dark:text-slate-500 text-sm mb-4">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+<span>October 24, 2023</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+<span>3 min read</span>
+</div>
+</div>
+<!-- Main Text Area -->
+<textarea class="w-full flex-1 bg-transparent border-none text-lg text-slate-700 dark:text-slate-300 placeholder:text-slate-300 dark:placeholder:text-slate-800 focus:ring-0 focus:outline-none resize-none p-0 min-h-[500px] leading-relaxed" placeholder="Start typing your brilliance here...">Our primary objective for Q4 is to streamline the user onboarding experience. Based on recent analytics, we noticed a 15% drop-off during the initial setup wizard.
+
+Key Initiatives:
+1. Simplify the multi-step form into a single dynamic interface.
+2. Implement real-time validation to reduce friction.
+3. Enhance the visual feedback for completed actions.
+
+The engineering team will begin the sprint on Monday. We need to ensure that the CloudNote infrastructure is ready for the increased sync frequency.
+
+Next Steps:
+- Review the low-fidelity wireframes with the UX team.
+- Finalize the API documentation for the new endpoint.
+- Schedule a sync with the marketing department for the launch campaign.
+</textarea>
+</div>
+<!-- Footer Info -->
+<footer class="mt-12 pt-8 border-t border-slate-100 dark:border-slate-900 flex justify-between items-center text-slate-400 dark:text-slate-600 text-xs">
+<div class="flex gap-4">
+<span>142 Words</span>
+<span>840 Characters</span>
+</div>
+<div>
+                        Last edited 2 minutes ago
+                    </div>
+</footer>
+</div>
+</main>
+<!-- Quick Action Floating Button (Optional enhancement) -->
+<div class="fixed bottom-8 right-8 flex flex-col gap-3">
+<button class="flex items-center justify-center size-12 rounded-full bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 shadow-xl border border-slate-100 dark:border-slate-800 hover:scale-105 transition-transform" title="Settings">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<button class="flex items-center justify-center size-14 rounded-full bg-primary text-white shadow-xl shadow-primary/20 hover:scale-110 transition-transform" title="Add Component">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+</body></html>

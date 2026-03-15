@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#1337ec",
+                "background-light": "#f6f6f8",
+                "background-dark": "#101322",
+              },
+              fontFamily: {
+                "display": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<title>CloudNote - Dashboard</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="flex h-screen overflow-hidden">
+<!-- SideNav Component -->
+<aside class="w-64 flex flex-col border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm">
+<div class="p-6 flex items-center gap-3">
+<div class="bg-primary rounded-lg p-2 text-white">
+<span class="material-symbols-outlined block">cloud</span>
+</div>
+<div>
+<h1 class="text-slate-900 dark:text-white text-lg font-bold leading-tight">CloudNote</h1>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium">Personal Workspace</p>
+</div>
+</div>
+<nav class="flex-1 px-4 space-y-1 mt-4">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary font-semibold" href="#">
+<span class="material-symbols-outlined text-[22px]">description</span>
+<span class="text-sm">All Notes</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-[22px]">star</span>
+<span class="text-sm">Favorites</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-[22px]">folder</span>
+<span class="text-sm">Folders</span>
+</a>
+<div class="pt-4 pb-2 px-3 text-[10px] font-bold uppercase tracking-wider text-slate-400">Organization</div>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-[22px]">archive</span>
+<span class="text-sm">Archive</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-[22px]">delete</span>
+<span class="text-sm">Trash</span>
+</a>
+</nav>
+<div class="p-4 border-t border-slate-100 dark:border-slate-800">
+<div class="bg-slate-50 dark:bg-slate-800 rounded-xl p-4">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary text-sm">cloud_done</span>
+<span class="text-xs font-semibold text-slate-700 dark:text-slate-300">Storage</span>
+</div>
+<div class="w-full bg-slate-200 dark:bg-slate-700 h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[65%]"></div>
+</div>
+<p class="text-[10px] text-slate-500 mt-2">6.5 GB of 10 GB used</p>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col min-w-0 overflow-hidden bg-background-light dark:bg-background-dark">
+<!-- Header Section -->
+<header class="flex items-center justify-between px-8 py-4 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
+<div class="flex-1 max-w-xl">
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary transition-colors">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-lg focus:ring-2 focus:ring-primary/20 text-sm transition-all outline-none" placeholder="Search your notes, tags, or content..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4 ml-4">
+<button class="p-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2.5 w-2 h-2 bg-red-500 rounded-full border-2 border-white dark:border-slate-900"></span>
+</button>
+<button class="p-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<div class="h-8 w-px bg-slate-200 dark:bg-slate-800 mx-2"></div>
+<div class="flex items-center gap-3">
+<div class="text-right hidden sm:block">
+<p class="text-sm font-semibold leading-none">Alex Rivera</p>
+<p class="text-[10px] text-slate-500 mt-1">Pro Account</p>
+</div>
+<img class="w-9 h-9 rounded-full border-2 border-primary/20" data-alt="User profile avatar of a professional" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbA-MkK7NPRgyEO--rx3r4Ym-8vWGjTZxzAxDMpRGUyUuyNBILkTehjKuzHKEIBywmMkhShF49A75g7dyrYGtKWFU5FV6mmZyrE0DzHhUi4rYQTS6bWyUYqGiL6H8fb5pGaQ6OiDAHnmv8yPhXSwz4wI0Tgfs8HhiyrjfiBegLj_4H-PXyGWBd8js2XsyNss4Y5wYsNabK4oQDm8CBAYrajeOWo9EIbQmX_DB2WE0daXzgQQLlQQb-BvG0WxzNFsKQKvsMVnd5FpY"/>
+</div>
+</div>
+</header>
+<!-- Dashboard Content -->
+<div class="flex-1 overflow-y-auto p-8">
+<!-- Content Top Bar -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+<div>
+<h2 class="text-3xl font-black tracking-tight text-slate-900 dark:text-white">All Notes</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-1">You have 24 notes in your personal workspace</p>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-sm font-semibold hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
+<span class="material-symbols-outlined text-lg">filter_list</span>
+                            Filter
+                        </button>
+<button class="flex items-center gap-2 px-5 py-2.5 bg-primary text-white rounded-lg text-sm font-bold shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all hover:-translate-y-0.5">
+<span class="material-symbols-outlined text-lg">add</span>
+                            New Note
+                        </button>
+</div>
+</div>
+<!-- Notes Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+<!-- Note Card 1 -->
+<div class="group bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary/40 transition-all shadow-sm hover:shadow-md cursor-pointer">
+<div class="flex justify-between items-start mb-4">
+<span class="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-[10px] font-bold rounded uppercase tracking-wider">Project</span>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors">star</span>
+</div>
+<h3 class="text-base font-bold text-slate-900 dark:text-white mb-2 group-hover:text-primary transition-colors">Dashboard Design UI</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 line-clamp-3 mb-4 leading-relaxed">
+                            Need to focus on clean and modern aesthetics. Use primary blue #1337ec and ensure accessibility compliance...
+                        </p>
+<div class="flex items-center justify-between pt-4 border-t border-slate-50 dark:border-slate-800">
+<div class="flex items-center gap-1.5 text-slate-400">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span class="text-[11px] font-medium">Oct 24, 2023</span>
+</div>
+<div class="flex -space-x-2">
+<img class="w-5 h-5 rounded-full border border-white dark:border-slate-900" data-alt="Small user avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5Ch1d0d75rOEWmQnvZY8F9OrYSfeqCCCcIA7etc_6TQzE7qcftAwc564xknlaoYIcpw-30q_UFx53eOaD0nILOdfyeKDlP3mCWuwGhs-hSJhT_m78HhACwRpX9E2Q-RZfn1fgprQjgNL50FQcK0OvPyFkSrx0aT6TbK_tVWzPY6-qKMmVNWI8Q_VSt-_0Ys-Wb8jigKZ6bVfytwlYKKOIZBmKol7MMGSgrivgs6U0JZg-tg4dC3aHXvdzcMIvzmyH_w8kkE3JIMI"/>
+<div class="w-5 h-5 rounded-full bg-slate-100 dark:bg-slate-800 border border-white dark:border-slate-900 flex items-center justify-center text-[8px] font-bold">+2</div>
+</div>
+</div>
+</div>
+<!-- Note Card 2 -->
+<div class="group bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary/40 transition-all shadow-sm hover:shadow-md cursor-pointer">
+<div class="flex justify-between items-start mb-4">
+<span class="px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-[10px] font-bold rounded uppercase tracking-wider">Ideas</span>
+<span class="material-symbols-outlined text-primary fill-1">star</span>
+</div>
+<h3 class="text-base font-bold text-slate-900 dark:text-white mb-2 group-hover:text-primary transition-colors">Marketing Strategy 2024</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 line-clamp-3 mb-4 leading-relaxed">
+                            Quarterly goals for user acquisition. Focus on organic growth through social media channels and content marketing...
+                        </p>
+<div class="flex items-center justify-between pt-4 border-t border-slate-50 dark:border-slate-800">
+<div class="flex items-center gap-1.5 text-slate-400">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span class="text-[11px] font-medium">Oct 22, 2023</span>
+</div>
+</div>
+</div>
+<!-- Note Card 3 -->
+<div class="group bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary/40 transition-all shadow-sm hover:shadow-md cursor-pointer">
+<div class="flex justify-between items-start mb-4">
+<span class="px-2 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-[10px] font-bold rounded uppercase tracking-wider">Meeting</span>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors">star</span>
+</div>
+<h3 class="text-base font-bold text-slate-900 dark:text-white mb-2 group-hover:text-primary transition-colors">Client Kickoff: Zenith</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 line-clamp-3 mb-4 leading-relaxed">
+                            Discuss project scope, timeline, and key stakeholders. Ensure the team is aligned on the mobile-first approach...
+                        </p>
+<div class="flex items-center justify-between pt-4 border-t border-slate-50 dark:border-slate-800">
+<div class="flex items-center gap-1.5 text-slate-400">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span class="text-[11px] font-medium">Oct 20, 2023</span>
+</div>
+</div>
+</div>
+<!-- Note Card 4 -->
+<div class="group bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary/40 transition-all shadow-sm hover:shadow-md cursor-pointer">
+<div class="flex justify-between items-start mb-4">
+<span class="px-2 py-1 bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 text-[10px] font-bold rounded uppercase tracking-wider">Personal</span>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors">star</span>
+</div>
+<h3 class="text-base font-bold text-slate-900 dark:text-white mb-2 group-hover:text-primary transition-colors">Book List to Read</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 line-clamp-3 mb-4 leading-relaxed">
+                            1. Atomic Habits - James Clear<br/>2. The Design of Everyday Things<br/>3. Clean Code: A Handbook of Agile Software Craftsmanship...
+                        </p>
+<div class="flex items-center justify-between pt-4 border-t border-slate-50 dark:border-slate-800">
+<div class="flex items-center gap-1.5 text-slate-400">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span class="text-[11px] font-medium">Oct 18, 2023</span>
+</div>
+</div>
+</div>
+<!-- Note Card 5 (Image Preview) -->
+<div class="group bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:border-primary/40 transition-all shadow-sm hover:shadow-md cursor-pointer">
+<div class="h-32 w-full bg-slate-200 dark:bg-slate-800 bg-center bg-cover" data-alt="Abstract blue and purple geometric pattern" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD8xepwhGoZmbyaypFIc8Z393hJId1G0wSQk7D2pnX0aGEcjpiFE0Hxj9tUuimKORxbWIrJdQrGQkFV4dbVV0gQ_8lRTO9Q40cYDMqW6AHgQzhmxfTNhbOCY5RKF9-bUMp-YafxPybtOmmST1XDG-jnsnDmdOwVWGltwuKMB1x--CjTQ0zYPgsBfrSOSTXyHTpdKFbNGUu1iirl0qQMXt5QFyUXxczRajcy0zlvi_ZHkAYrkJkUzQzb2dtMu8ofvDpTApQmfS-p4K0')"></div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-3">
+<span class="px-2 py-1 bg-rose-100 dark:bg-rose-900/30 text-rose-600 dark:text-rose-400 text-[10px] font-bold rounded uppercase tracking-wider">Design</span>
+<span class="material-symbols-outlined text-slate-300">star</span>
+</div>
+<h3 class="text-base font-bold text-slate-900 dark:text-white mb-2 group-hover:text-primary transition-colors">Moodboard: Nature &amp; Tech</h3>
+<div class="flex items-center gap-1.5 text-slate-400">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span class="text-[11px] font-medium">Oct 15, 2023</span>
+</div>
+</div>
+</div>
+<!-- Note Card 6 -->
+<div class="group bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary/40 transition-all shadow-sm hover:shadow-md cursor-pointer">
+<div class="flex justify-between items-start mb-4">
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-[10px] font-bold rounded uppercase tracking-wider">Uncategorized</span>
+<span class="material-symbols-outlined text-slate-300">star</span>
+</div>
+<h3 class="text-base font-bold text-slate-900 dark:text-white mb-2 group-hover:text-primary transition-colors">Quick Groceries List</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 line-clamp-3 mb-4 leading-relaxed">
+                            Milk, Bread, Coffee beans, Oat milk, Avocados, Tomatoes, Chicken breast, Pasta sauce...
+                        </p>
+<div class="flex items-center justify-between pt-4 border-t border-slate-50 dark:border-slate-800">
+<div class="flex items-center gap-1.5 text-slate-400">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span class="text-[11px] font-medium">Oct 12, 2023</span>
+</div>
+</div>
+</div>
+<!-- Placeholder for adding a new note -->
+<div class="border-2 border-dashed border-slate-200 dark:border-slate-800 rounded-xl flex flex-col items-center justify-center p-8 hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:border-primary/30 transition-all cursor-pointer group">
+<div class="w-12 h-12 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center mb-3 group-hover:bg-primary/10 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-2xl">add</span>
+</div>
+<p class="text-sm font-bold text-slate-400 group-hover:text-primary transition-colors">Create New Note</p>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

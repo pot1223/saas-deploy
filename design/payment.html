@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1337ec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101322",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>CloudNote - Pricing Plans</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 px-6 md:px-20 py-4 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md sticky top-0 z-50">
+<div class="flex items-center gap-3">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined">cloud_done</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight">CloudNote</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8 items-center">
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 dark:text-slate-400 text-sm font-medium hover:text-primary transition-colors" href="#">Features</a>
+<a class="text-primary text-sm font-semibold" href="#">Pricing</a>
+<a class="text-slate-600 dark:text-slate-400 text-sm font-medium hover:text-primary transition-colors" href="#">About</a>
+</nav>
+<button class="flex min-w-[100px] cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all">
+                        Sign In
+                    </button>
+</div>
+</header>
+<main class="flex-1">
+<div class="max-w-[1200px] mx-auto px-6 py-12 md:py-20">
+<div class="text-center mb-16 max-w-2xl mx-auto">
+<h1 class="text-slate-900 dark:text-slate-100 text-4xl md:text-5xl font-black leading-tight tracking-tight mb-4">
+                            Choose the right plan for your notes
+                        </h1>
+<p class="text-slate-500 dark:text-slate-400 text-lg">
+                            Simple, transparent pricing for individuals and teams of all sizes.
+                        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+<div class="flex flex-col gap-6 rounded-xl border border-solid border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 p-8 hover:shadow-xl transition-shadow">
+<div class="flex flex-col gap-2">
+<h3 class="text-slate-500 dark:text-slate-400 text-sm font-bold uppercase tracking-wider">Free</h3>
+<div class="flex items-baseline gap-1">
+<span class="text-slate-900 dark:text-slate-100 text-5xl font-black tracking-tight">$0</span>
+<span class="text-slate-500 dark:text-slate-400 text-base font-medium">/month</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-2">Perfect for getting started with digital journaling.</p>
+</div>
+<button class="w-full flex cursor-pointer items-center justify-center rounded-lg h-12 px-4 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100 text-sm font-bold hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+                                Get Started
+                            </button>
+<div class="flex flex-col gap-4 pt-4">
+<div class="flex items-center gap-3 text-sm text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                    5GB Cloud Storage
+                                </div>
+<div class="flex items-center gap-3 text-sm text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                    Sync across 2 devices
+                                </div>
+<div class="flex items-center gap-3 text-sm text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                    Basic search functionality
+                                </div>
+</div>
+</div>
+<div class="flex flex-col gap-6 rounded-xl border-2 border-solid border-primary bg-white dark:bg-slate-900 p-8 shadow-2xl relative">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white text-[11px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full">
+                                Most Popular
+                            </div>
+<div class="flex flex-col gap-2">
+<h3 class="text-primary text-sm font-bold uppercase tracking-wider">Pro</h3>
+<div class="flex items-baseline gap-1">
+<span class="text-slate-900 dark:text-slate-100 text-5xl font-black tracking-tight">$9</span>
+<span class="text-slate-500 dark:text-slate-400 text-base font-medium">/month</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-2">Everything you need for professional organization.</p>
+</div>
+<button class="w-full flex cursor-pointer items-center justify-center rounded-lg h-12 px-4 bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-colors shadow-lg shadow-primary/30">
+                                Subscribe Now
+                            </button>
+<div class="flex flex-col gap-4 pt-4">
+<div class="flex items-center gap-3 text-sm text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                    50GB Cloud Storage
+                                </div>
+<div class="flex items-center gap-3 text-sm text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                    Unlimited device syncing
+                                </div>
+<div class="flex items-center gap-3 text-sm text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                    Offline editing mode
+                                </div>
+<div class="flex items-center gap-3 text-sm text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                    Advanced collaboration
+                                </div>
+</div>
+</div>
+<div class="flex flex-col gap-6 rounded-xl border border-solid border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 p-8 hover:shadow-xl transition-shadow">
+<div class="flex flex-col gap-2">
+<h3 class="text-slate-500 dark:text-slate-400 text-sm font-bold uppercase tracking-wider">Enterprise</h3>
+<div class="flex items-baseline gap-1">
+<span class="text-slate-900 dark:text-slate-100 text-5xl font-black tracking-tight">$29</span>
+<span class="text-slate-500 dark:text-slate-400 text-base font-medium">/month</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-2">Scale and secure your team's knowledge.</p>
+</div>
+<button class="w-full flex cursor-pointer items-center justify-center rounded-lg h-12 px-4 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100 text-sm font-bold hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+                                Contact Sales
+                            </button>
+<div class="flex flex-col gap-4 pt-4">
+<div class="flex items-center gap-3 text-sm text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                    Unlimited Cloud Storage
+                                </div>
+<div class="flex items-center gap-3 text-sm text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                    Admin dashboard &amp; roles
+                                </div>
+<div class="flex items-center gap-3 text-sm text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                    SAML SSO &amp; Security
+                                </div>
+<div class="flex items-center gap-3 text-sm text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                    Dedicated support
+                                </div>
+</div>
+</div>
+</div>
+<div class="space-y-8">
+<div class="text-center">
+<h2 class="text-slate-900 dark:text-slate-100 text-3xl font-bold tracking-tight">Compare Features</h2>
+<p class="text-slate-500 dark:text-slate-400 mt-2">See exactly what you get with each plan.</p>
+</div>
+<div class="overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 shadow-sm">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-slate-50 dark:bg-slate-800/50">
+<th class="px-6 py-5 text-sm font-semibold text-slate-900 dark:text-slate-100">Feature</th>
+<th class="px-6 py-5 text-sm font-semibold text-slate-900 dark:text-slate-100 text-center">Free</th>
+<th class="px-6 py-5 text-sm font-semibold text-primary text-center">Pro</th>
+<th class="px-6 py-5 text-sm font-semibold text-slate-900 dark:text-slate-100 text-center">Enterprise</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+<tr>
+<td class="px-6 py-4 text-sm font-medium text-slate-700 dark:text-slate-300">Storage Limit</td>
+<td class="px-6 py-4 text-sm text-slate-500 dark:text-slate-400 text-center">5GB</td>
+<td class="px-6 py-4 text-sm font-semibold text-slate-900 dark:text-slate-100 text-center">50GB</td>
+<td class="px-6 py-4 text-sm text-slate-500 dark:text-slate-400 text-center">Unlimited</td>
+</tr>
+<tr>
+<td class="px-6 py-4 text-sm font-medium text-slate-700 dark:text-slate-300">Device Count</td>
+<td class="px-6 py-4 text-sm text-slate-500 dark:text-slate-400 text-center">2 Devices</td>
+<td class="px-6 py-4 text-sm font-semibold text-slate-900 dark:text-slate-100 text-center">Unlimited</td>
+<td class="px-6 py-4 text-sm text-slate-500 dark:text-slate-400 text-center">Unlimited</td>
+</tr>
+<tr>
+<td class="px-6 py-4 text-sm font-medium text-slate-700 dark:text-slate-300">Collaboration Tools</td>
+<td class="px-6 py-4 text-sm text-slate-500 dark:text-slate-400 text-center">Basic Sharing</td>
+<td class="px-6 py-4 text-sm font-semibold text-slate-900 dark:text-slate-100 text-center">Real-time Collab</td>
+<td class="px-6 py-4 text-sm text-slate-500 dark:text-slate-400 text-center">Granular Permissions</td>
+</tr>
+<tr>
+<td class="px-6 py-4 text-sm font-medium text-slate-700 dark:text-slate-300">Search Capabilities</td>
+<td class="px-6 py-4 text-sm text-slate-500 dark:text-slate-400 text-center">Keywords</td>
+<td class="px-6 py-4 text-sm font-semibold text-slate-900 dark:text-slate-100 text-center">Full-text &amp; OCR</td>
+<td class="px-6 py-4 text-sm text-slate-500 dark:text-slate-400 text-center">AI-powered Semantic</td>
+</tr>
+<tr>
+<td class="px-6 py-4 text-sm font-medium text-slate-700 dark:text-slate-300">History &amp; Backups</td>
+<td class="px-6 py-4 text-sm text-slate-500 dark:text-slate-400 text-center">7 Days</td>
+<td class="px-6 py-4 text-sm font-semibold text-slate-900 dark:text-slate-100 text-center">30 Days</td>
+<td class="px-6 py-4 text-sm text-slate-500 dark:text-slate-400 text-center">Infinite</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-12 px-6">
+<div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-3 mb-4">
+<div class="size-6 bg-primary rounded flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[16px]">cloud_done</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold">CloudNote</h2>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400">The world's most intuitive note-taking experience, built for the modern cloud.</p>
+</div>
+<div>
+<h4 class="text-slate-900 dark:text-slate-100 font-bold mb-4">Product</h4>
+<ul class="space-y-2 text-sm text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary" href="#">Features</a></li>
+<li><a class="hover:text-primary" href="#">Desktop App</a></li>
+<li><a class="hover:text-primary" href="#">Mobile App</a></li>
+<li><a class="hover:text-primary" href="#">Security</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-slate-900 dark:text-slate-100 font-bold mb-4">Resources</h4>
+<ul class="space-y-2 text-sm text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary" href="#">Help Center</a></li>
+<li><a class="hover:text-primary" href="#">API Docs</a></li>
+<li><a class="hover:text-primary" href="#">Community</a></li>
+<li><a class="hover:text-primary" href="#">Blog</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-slate-900 dark:text-slate-100 font-bold mb-4">Newsletter</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Get the latest updates on new features.</p>
+<div class="flex gap-2">
+<input class="bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg text-sm w-full focus:ring-primary focus:border-primary" placeholder="Email" type="email"/>
+<button class="bg-primary text-white p-2 rounded-lg"><span class="material-symbols-outlined">arrow_forward</span></button>
+</div>
+</div>
+</div>
+<div class="max-w-[1200px] mx-auto mt-12 pt-8 border-t border-slate-100 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-xs text-slate-400">© 2024 CloudNote Inc. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-xs text-slate-400 hover:text-primary" href="#">Privacy Policy</a>
+<a class="text-xs text-slate-400 hover:text-primary" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</body></html>

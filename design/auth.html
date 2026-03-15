@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login - CloudNote</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#1337ec",
+                "background-light": "#f6f6f8",
+                "background-dark": "#101322",
+              },
+              fontFamily: {
+                "display": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<div class="flex min-h-screen">
+<!-- Left Side: Form Section -->
+<div class="flex flex-1 flex-col justify-center px-6 py-12 lg:px-24 xl:px-32 bg-background-light dark:bg-background-dark">
+<div class="mx-auto w-full max-w-sm lg:w-96">
+<!-- Logo -->
+<div class="flex items-center gap-3 mb-10">
+<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-white">
+<span class="material-symbols-outlined text-2xl">cloud_queue</span>
+</div>
+<h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">CloudNote</h2>
+</div>
+<div>
+<h2 class="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white">Welcome back</h2>
+<p class="mt-2 text-sm text-slate-600 dark:text-slate-400">
+                        Don't have an account? 
+                        <a class="font-semibold text-primary hover:underline" href="#">Start your 14-day free trial</a>
+</p>
+</div>
+<div class="mt-10">
+<!-- Form -->
+<form action="#" class="space-y-6" method="POST">
+<div>
+<label class="block text-sm font-medium leading-6 text-slate-900 dark:text-slate-200" for="email">Email address</label>
+<div class="mt-2">
+<input autocomplete="email" class="block w-full rounded-lg border-0 py-3 text-slate-900 shadow-sm ring-1 ring-inset ring-slate-300 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-primary dark:bg-slate-800 dark:text-white dark:ring-slate-700 sm:text-sm sm:leading-6" id="email" name="email" placeholder="name@company.com" required="" type="email"/>
+</div>
+</div>
+<div>
+<div class="flex items-center justify-between">
+<label class="block text-sm font-medium leading-6 text-slate-900 dark:text-slate-200" for="password">Password</label>
+<div class="text-sm">
+<a class="font-semibold text-primary hover:underline" href="#">Forgot password?</a>
+</div>
+</div>
+<div class="mt-2 relative">
+<input autocomplete="current-password" class="block w-full rounded-lg border-0 py-3 text-slate-900 shadow-sm ring-1 ring-inset ring-slate-300 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-primary dark:bg-slate-800 dark:text-white dark:ring-slate-700 sm:text-sm sm:leading-6" id="password" name="password" placeholder="••••••••" required="" type="password"/>
+<button class="absolute inset-y-0 right-0 flex items-center pr-3 text-slate-400 hover:text-slate-600" type="button">
+<span class="material-symbols-outlined text-xl">visibility</span>
+</button>
+</div>
+</div>
+<div class="flex items-center">
+<input class="h-4 w-4 rounded border-slate-300 text-primary focus:ring-primary" id="remember-me" name="remember-me" type="checkbox"/>
+<label class="ml-3 block text-sm leading-6 text-slate-700 dark:text-slate-300" for="remember-me">Remember me</label>
+</div>
+<div>
+<button class="flex w-full justify-center rounded-lg bg-primary px-3 py-3 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary" type="submit">
+                                Sign in
+                            </button>
+</div>
+</form>
+<div class="mt-10">
+<div class="relative">
+<div aria-hidden="true" class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-slate-200 dark:border-slate-800"></div>
+</div>
+<div class="relative flex justify-center text-sm font-medium leading-6">
+<span class="bg-background-light dark:bg-background-dark px-6 text-slate-400">Or continue with</span>
+</div>
+</div>
+<div class="mt-6 grid grid-cols-2 gap-4">
+<a class="flex w-full items-center justify-center gap-3 rounded-lg bg-white dark:bg-slate-800 px-3 py-2 text-sm font-semibold text-slate-900 dark:text-white shadow-sm ring-1 ring-inset ring-slate-300 dark:ring-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 focus-visible:ring-transparent" href="#">
+<svg class="h-5 w-5" viewbox="0 0 24 24">
+<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
+<path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
+<path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"></path>
+<path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 12-4.53z" fill="#EA4335"></path>
+</svg>
+<span class="text-sm font-semibold leading-6">Google</span>
+</a>
+<a class="flex w-full items-center justify-center gap-3 rounded-lg bg-white dark:bg-slate-800 px-3 py-2 text-sm font-semibold text-slate-900 dark:text-white shadow-sm ring-1 ring-inset ring-slate-300 dark:ring-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 focus-visible:ring-transparent" href="#">
+<svg class="h-5 w-5 fill-current" viewbox="0 0 24 24">
+<path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.844-1.026 1.402-2.441 1.247-3.83-1.183.052-2.61.793-3.461 1.792-.767.87-1.442 2.312-1.26 3.663 1.312.104 2.637-.6 3.474-1.625z"></path>
+</svg>
+<span class="text-sm font-semibold leading-6">Apple</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<footer class="mt-auto pt-10 text-center text-xs text-slate-500">
+                © 2024 CloudNote Inc. All rights reserved.
+            </footer>
+</div>
+<!-- Right Side: Visual/Inspirational Section -->
+<div class="relative hidden w-0 flex-1 lg:block bg-primary overflow-hidden">
+<div class="absolute inset-0 z-10 bg-gradient-to-br from-primary via-primary/80 to-indigo-900 opacity-90"></div>
+<!-- Background Image -->
+<img alt="Minimal clean workspace with laptop and notebook" class="absolute inset-0 h-full w-full object-cover" data-alt="Minimal clean workspace with laptop and notebook" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWlqE0A3o9udZMB5mZKtaluWr56ZK4p-BjBFQf7797UPKRBL_9vv_pOQ9JJqdfZewOC6EXYUdgk-QoR9svlq6R-_GjyJN6R7KlDk6e4jHaiNfSR4nZxvCj-j5V-o_S7POYH1D-yfKB6eE0qRz_s7WLfc-GIjfIG4Zmh4psgqWVJsA4ad1mz07IZkL-8PeqtFrCEMZii_4uIq3sAqjuqg0YY2HqWTB49LfEG1BUGc_2rjpKSyt45GsfOv_QpWDGZyYxMAoDrxM6v0w"/>
+<!-- Content Overlay -->
+<div class="relative z-20 flex h-full flex-col justify-center px-12 text-white xl:px-24">
+<div class="max-w-xl">
+<span class="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-sm font-medium text-white ring-1 ring-inset ring-white/20 mb-8">
+                        New Features Available
+                    </span>
+<h1 class="text-5xl font-black tracking-tight leading-none mb-6">
+                        Organize your <br/><span class="text-blue-300">brilliant ideas</span> <br/>in the cloud.
+                    </h1>
+<p class="text-lg text-blue-100/80 leading-relaxed mb-10">
+                        Join over 2 million creative minds who use CloudNote to capture, organize, and share their best thoughts from anywhere in the world.
+                    </p>
+<div class="grid grid-cols-2 gap-8 border-t border-white/10 pt-10">
+<div>
+<p class="text-3xl font-bold">99.9%</p>
+<p class="text-sm text-blue-200">Uptime Reliability</p>
+</div>
+<div>
+<p class="text-3xl font-bold">256-bit</p>
+<p class="text-sm text-blue-200">AES Encryption</p>
+</div>
+</div>
+</div>
+<!-- Testimonial -->
+<div class="mt-20 flex items-center gap-4">
+<div class="flex -space-x-2 overflow-hidden">
+<img alt="User avatar" class="inline-block h-10 w-10 rounded-full ring-2 ring-primary" data-alt="Portrait of a smiling professional woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpsZLbLHvtPPF5QPRIST6F6RE4KI1XcSvThVvwoKbEAKOmbK2aZ34p8VAyC1NBZyRO5G8x1I1MlKy7OiULC5GnrHdGeyR23FnCgYIPNE45cHVSJwG8aRPzoLnk3qwW_uKkFEP0pNiPpwIBCeo9RpUah7pDy7wRyesW6t_lt44vrW57oHadJiylk6-j4yi_mzXVYuUPgHXja0dTFuaby9Aw-LcplA09kKpPMRV05A2RjV-XWVQSjgRIwWEa5N5B10HKzpqYfIIJIIE"/>
+<img alt="User avatar" class="inline-block h-10 w-10 rounded-full ring-2 ring-primary" data-alt="Portrait of a smiling professional man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-gKoHxn0FNSzICO_O0oC68eZT74JlRBqBKbTBmA2YqUpUXEjZ16Q0WmwxdCDpmRcwmL_zeOr5YnKDvRmlco4hQVxFBBaxf5lI2zgwczb3_bbdyqpSHyBX2FwCB_aKNxu58n0HkeVMX_Uw5k9XFEGYaB0DhF8fQKp0VPns4DWB1JYSiRe_aFPbSLhKeAoWrnvPI9m2jusp-SoFDLdNaBAkEckNmh37u0vfwh1kuswvGOiJIRnAU_y5bfHAdw8UMqZdiKqc1xeGyYs"/>
+<img alt="User avatar" class="inline-block h-10 w-10 rounded-full ring-2 ring-primary" data-alt="Portrait of a young creative man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcdC0rL6AtvxFTtlq7LibC1N3ZDKtasJyjH5-HLnGMq-sYnaoGGkm4X7zpzWuW5aljYBh1HAwcgPDnZORYCkNZVqDZmwc7W3uFC8UWxU19HS9NFI3ztUOz6H-Fk56_JzYpBYCfwZi287p3dOOtdszeiIc7Cc185SAyNndN2GviB7I2vYRA5mgW_3eOUXKuX0wEO1YtBCVRJRpQIEe0k2lECXP7-IPaW5p0MG9Egh95eqXESfxHfSipa2wg3TaN4p__WT2fmqptdII"/>
+</div>
+<p class="text-sm text-blue-100">Trusted by global leaders</p>
+</div>
+</div>
+<!-- Decorative Elements -->
+<div class="absolute -bottom-24 -right-24 h-96 w-96 rounded-full bg-blue-500/20 blur-3xl"></div>
+<div class="absolute -top-24 -left-24 h-96 w-96 rounded-full bg-indigo-500/20 blur-3xl"></div>
+</div>
+</div>
+</body></html>
